@@ -1,7 +1,7 @@
 job("J1_groovy"){
         description("this job will copy the file in folder ")
         scm {
-                 github('varunbhutani98/task-6' , 'master')
+                 github('pankajsuhag/task-6' , 'master')
              }
         triggers {
                 scm("* * * * *")
@@ -74,7 +74,7 @@ job("J2_groovy"){
 	  
 	  publishers {
 	        extendedEmail {
-	            recipientList('varunbhutani98@gmail.com')
+	            recipientList('pankaj.suhag.397@gmail.com')
 	            defaultSubject('Job status')
 	          	attachBuildLog(attachBuildLog = true)
 	            defaultContent('Status Report')
