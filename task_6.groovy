@@ -1,4 +1,4 @@
-job("J1_groovy"){
+job("Job1_groovy"){
         description("this job will copy the file in folder ")
         scm {
                  github('pankajsuhag/task-6' , 'master')
@@ -14,7 +14,7 @@ job("J1_groovy"){
 }
 
 
-job("J2_groovy"){
+job("Job2_groovy"){
         description("this Job will create deployment for website and expose deployment")
         
         triggers {
@@ -44,7 +44,7 @@ job("J2_groovy"){
 }
 
 
-  job("J3_groovy")
+  job("Job3_groovy")
 	{
 	  steps{
 	    shell('''
@@ -69,7 +69,7 @@ job("J2_groovy"){
 	  }
 	  
 	  triggers {
-	        upstream('J2_groovy', 'SUCCESS')
+	        upstream('Job2_groovy', 'SUCCESS')
 	  }
 	  
 	  publishers {
